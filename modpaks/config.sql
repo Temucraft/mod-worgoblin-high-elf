@@ -1476,6 +1476,11 @@ SET @AllianceHaranirRacialSkillRaceClass                        =   1192;
 SET @HordeHaranirRacialSkillRaceClass                           =   1193;
 SET @AllianceSkyborneRacialSkillRaceClass                       =   1194;
 SET @HordeSkyborneRacialSkillRaceClass                          =   1195;
+SET @NightborneRacialSkillRaceClass                             =   1196;
+SET @KulTiranRacialSkillRaceClass                               =   1197;
+SET @MechagnomeRacialSkillRaceClass                             =   1198;
+SET @AllianceEarthenRacialSkillRaceClass                        =   1199;
+SET @HordeEarthenRacialSkillRaceClass                           =   1200;
 
 -- Weapon SkillRaceClass
 SET @AxesHunterSkillRaceClass1                                 =      117; -- Hunter: Orc, Dwarf, Tauren, Troll

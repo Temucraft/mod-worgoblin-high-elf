@@ -8,3 +8,9 @@ WHERE (`race_mask` & @TaurenMask) <> 0;
 -- DELETE FROM `skillraceclassinfo` WHERE `id` = 1143;
 -- INSERT INTO `skillraceclassinfo` (`id`, `skill_id`, `race_mask`, `class_mask`, `flags`, `min_level`, `skill_tier_id`, `skill_cost_id`)
 -- VALUES (1143, @HighmountainTaurenRacials, @HighmountainTaurenMask, @AllClassMask, 1170, 0, 0, 0);
+
+-- SkillRaceClassInfo for Highmountain Tauren's racial skill line: without it the core drops the skill (and its racials) from
+-- every Highmountain Tauren character, at creation and at login
+DELETE FROM `skillraceclassinfo` WHERE `id` = @HighmountainTaurenRacialSkillRaceClass;
+INSERT INTO `skillraceclassinfo` (`id`, `skill_id`, `race_mask`, `class_mask`, `flags`, `min_level`, `skill_tier_id`, `skill_cost_id`)
+VALUES (@HighmountainTaurenRacialSkillRaceClass, @HighmountainTaurenRacials, @HighmountainTaurenMask, @AllClassMask, 1170, 0, 0, 0);
