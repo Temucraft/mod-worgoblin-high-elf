@@ -119,7 +119,7 @@ F-099_mod-playable-haranir-horde # On for the retail races (was off by default: 
 #F-015_mod-instamount # Off by default
 F-026_custom-race-support # required for any custom race to function correctly
 F-002_mod-arac # On for the retail races (was off by default)
-#F-010_patch-open-azeroth # Off by default (requires OA map/camera/vmap files, mmaps recommended, core patch + recompile recommended; keep after F-002, which re-adds the Blood Elf and Draenei starts on map 530 for its move scripts to relocate)
+F-010_patch-open-azeroth # On for Open Azeroth (was off by default: requires OA map/camera/vmap files, mmaps recommended, core patch + recompile recommended; keep after F-002, which re-adds the Blood Elf and Draenei starts on map 530 for its move scripts to relocate)
 #F-013_zep-goblin-start # Off by default (Kezan and the Lost Isles; requires F-010 and F-023, a core patch + recompile and client assets, see its readme; keep after F-002, whose extra classes it moves to Kezan too)
 #F-101_zep-custom-icons # Off by default (Zeppelin-Craft's custom item and spell icons, for items and spells that use them; needs the icons from WHE-common)
 #F-102_zep-lost-isles-terrain # Off by default (the Lost Isles' phase terrain; requires F-013 and F-010, a core patch + recompile, a client that draws terrain swaps, client assets and server maps, see its readme; keep after F-013)
@@ -130,7 +130,7 @@ F-089_server-qol # No fatigue and higher .modify limits (core patches in patches
 F-090_mmaps-generator-fixes # mmaps_generator buffer fixes for map ids of 1000 and up (core patch in patches/core)
 F-093_racial-mount-vendors # Goblin and Worgen racial mount vendors, for the race modpaks in the manifest; comment out if you don't want them
 #F-092_racial-mount-merchant # Off by default (neutral vendor in Booty Bay selling the racial mounts of enabled races; keep after every race modpak)
-#F-075_mod-individual-progression # Off by default (for mod-individual-progression: needs its world SQL applied first, patch in patches/individual-progression; keep it last)
+F-075_mod-individual-progression # On for Individual Progression (was off by default: for mod-individual-progression: needs its world SQL applied first, patch in patches/individual-progression; keep it last)
 #F-076_mod-individual-progression_extras # Off by default (mod-individual-progression's optional SQL and DBCs; one file per feature, delete the ones you don't want, see its readme)
 #F-128_hunter-starting-pets # Off by default (hunters start with a Cataclysm-style pet per race; needs a recompile, see its readme)
 # END ADDITIONAL MODS #
