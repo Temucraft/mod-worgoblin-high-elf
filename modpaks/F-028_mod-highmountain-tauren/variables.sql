@@ -7,6 +7,7 @@ SET @HighmountainTaurenHelmetMask                 = 1 << @HighmountainTauren;
 SET @HordeMask                                    = @HordeMask | @HighmountainTaurenMask;
 SET @BarrensBros                                  = @HordeMask    & ~@UndercityMask; -- important if Horde
 SET @PlayableRaceMask                             = @AllianceMask | @HordeMask;
+SET @GunHunters                                   = @GunHunters   | @HighmountainTaurenMask; -- hunters start with the Tauren outfit's gun
 SET @HighmountainTaurenLanguage                   = 1; -- 7 for Alliance, 1 for Horde (ChrRaces.dbc)
 SET @HighmountainTaurenAlliance                   = 1; -- 0 for Alliance, 1 for Horde (ChrRaces.dbc)
 SET @HighmountainTaurenKnowThyEnemy               = @KnowThyEnemyHorde;

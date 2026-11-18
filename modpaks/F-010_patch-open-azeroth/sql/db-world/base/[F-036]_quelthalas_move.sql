@@ -129,7 +129,7 @@ WHERE
     QuestID IN (
         SELECT QuestID
         FROM quest_poi
-        WHERE JSON_CONTAINS(@WorldMapAreaId_list, CAST(WorldMapAreaId AS JSON))
+        WHERE JSON_CONTAINS(@WorldMapAreaId_list, CAST(WorldMapAreaId AS CHAR))
     );
 
 UPDATE quest_poi
@@ -137,7 +137,7 @@ SET
     MAPID = @map_id_new
 WHERE
     MAPID = @map_id AND
-   	JSON_CONTAINS(@WorldMapAreaId_list, CAST(WorldMapAreaId AS JSON));
+   	JSON_CONTAINS(@WorldMapAreaId_list, CAST(WorldMapAreaId AS CHAR));
 
 UPDATE areatrigger
 SET

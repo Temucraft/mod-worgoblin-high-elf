@@ -36,7 +36,7 @@ F-023_mod-playable-goblin # requires recompile for Best Deals Anywhere and Rocke
 F-024_mod-playable-worgen # recompile for Running Wild functionality, but can be bypassed using ALE (see lua_scripts)
 #F-094_alpha-worgen-assets # Off by default (tentative, untested; alpha Worgen look, requires F-024)
 F-027_mod-gilnean # requires F-024
-F-063_worgen_racial_spells # requires F-024 (listed after it), a recompile and the patched client: Running Wild as a mount on oneself, Two Forms as altered form
+#F-063_worgen_racial_spells # requires F-024 (listed after it), a recompile and the patched client: Running Wild as a mount on oneself, Two Forms as altered form  [off: needs the wowdecomp client; the stock exe lacks its client side]
 F-020_mod-pandaren-alliance
 F-021_mod-pandaren-horde
 F-034_mod-nightborne
@@ -50,28 +50,28 @@ F-019_mod-vulpera
 F-016_mod-dark-iron-dwarf
 F-007_mod-maghar
 F-037_maghar-modern-assets # Optional: modern Mag'har models and textures (requires F-007)
-#F-040_mod-mechagnome # Off by default (WIP – not ready)
-#F-073_mod-playable-dracthyr-alliance # Off by default (tentative, untested; the stock client shows the Human model)
-#F-074_mod-playable-dracthyr-horde # Off by default (tentative, untested; the stock client shows the Orc model)
-#F-038_mod-earthen-alliance # Off by default (WIP – not ready)
-#F-039_mod-earthen-horde # Off by default (WIP – not ready)
-#F-098_mod-playable-haranir-alliance # Off by default (tentative, untested; baked native look; the Retail look is 256-bit only)
-#F-099_mod-playable-haranir-horde # Off by default (tentative, untested; baked native look; the Retail look is 256-bit only)
+F-040_mod-mechagnome # On for the retail races (was off by default: WIP – not ready)
+F-073_mod-playable-dracthyr-alliance # On for the retail races (was off by default: tentative, untested; the stock client shows the Human model)
+F-074_mod-playable-dracthyr-horde # On for the retail races (was off by default: tentative, untested; the stock client shows the Orc model)
+F-038_mod-earthen-alliance # On for the retail races (was off by default: WIP – not ready)
+F-039_mod-earthen-horde # On for the retail races (was off by default: WIP – not ready)
+F-098_mod-playable-haranir-alliance # On for the retail races (was off by default: tentative, untested; baked native look; the Retail look is 256-bit only)
+F-099_mod-playable-haranir-horde # On for the retail races (was off by default: tentative, untested; baked native look; the Retail look is 256-bit only)
 #F-103_mod-skyborne-alliance # Off by default (tentative, untested; native look from Kalibro's package; the Forever look is 256-bit only)
 #F-104_mod-skyborne-horde # Off by default (tentative, untested; native look from Kalibro's package; the Forever look is 256-bit only)
 # END RETAIL RACES #
 
 # NPC RACES #
 #F-047_mod-playable-fel-orc # Off by default (WIP – female bugged)
-F-030_mod-playable-naga
-F-022_mod-playable-broken
-F-036_mod-playable-vrykul
-F-042_mod-playable-tuskarr
-F-032_mod-taunka
-F-048_mod-playable-skeleton
-F-049_mod-playable-forest-troll
+#F-030_mod-playable-naga  [off: race slot freed for the retail races]
+#F-022_mod-playable-broken  [off: race slot freed for the retail races]
+#F-036_mod-playable-vrykul  [off: race slot freed for the retail races]
+#F-042_mod-playable-tuskarr  [off: race slot freed for the retail races]
+#F-032_mod-taunka  [off: race slot freed for the retail races]
+#F-048_mod-playable-skeleton  [off: race slot freed for the retail races]
+#F-049_mod-playable-forest-troll  [off: race slot freed for the retail races]
 #F-050_mod-playable-northrend-skeleton # Off by default (very big)
-F-051_mod-playable-ice-troll
+#F-051_mod-playable-ice-troll  [off: race slot freed for the retail races]
 # END NPC RACES #
 
 # EXTRA RACES #
@@ -118,8 +118,8 @@ F-051_mod-playable-ice-troll
 #F-012_mod-extra-models # Off by default
 #F-015_mod-instamount # Off by default
 F-026_custom-race-support # required for any custom race to function correctly
-#F-002_mod-arac # Off by default
-#F-010_patch-open-azeroth # Off by default (requires OA map/camera/vmap files, mmaps recommended, core patch + recompile recommended; keep after F-002, which re-adds the Blood Elf and Draenei starts on map 530 for its move scripts to relocate)
+F-002_mod-arac # On for the retail races (was off by default)
+F-010_patch-open-azeroth # On for Open Azeroth (was off by default: requires OA map/camera/vmap files, mmaps recommended, core patch + recompile recommended; keep after F-002, which re-adds the Blood Elf and Draenei starts on map 530 for its move scripts to relocate)
 #F-013_zep-goblin-start # Off by default (Kezan and the Lost Isles; requires F-010 and F-023, a core patch + recompile and client assets, see its readme; keep after F-002, whose extra classes it moves to Kezan too)
 #F-101_zep-custom-icons # Off by default (Zeppelin-Craft's custom item and spell icons, for items and spells that use them; needs the icons from WHE-common)
 #F-102_zep-lost-isles-terrain # Off by default (the Lost Isles' phase terrain; requires F-013 and F-010, a core patch + recompile, a client that draws terrain swaps, client assets and server maps, see its readme; keep after F-013)
@@ -130,7 +130,7 @@ F-089_server-qol # No fatigue and higher .modify limits (core patches in patches
 F-090_mmaps-generator-fixes # mmaps_generator buffer fixes for map ids of 1000 and up (core patch in patches/core)
 F-093_racial-mount-vendors # Goblin and Worgen racial mount vendors, for the race modpaks in the manifest; comment out if you don't want them
 #F-092_racial-mount-merchant # Off by default (neutral vendor in Booty Bay selling the racial mounts of enabled races; keep after every race modpak)
-#F-075_mod-individual-progression # Off by default (for mod-individual-progression: needs its world SQL applied first, patch in patches/individual-progression; keep it last)
+F-075_mod-individual-progression # On for Individual Progression (was off by default: for mod-individual-progression: needs its world SQL applied first, patch in patches/individual-progression; keep it last)
 #F-076_mod-individual-progression_extras # Off by default (mod-individual-progression's optional SQL and DBCs; one file per feature, delete the ones you don't want, see its readme)
 #F-128_hunter-starting-pets # Off by default (hunters start with a Cataclysm-style pet per race; needs a recompile, see its readme)
 # END ADDITIONAL MODS #

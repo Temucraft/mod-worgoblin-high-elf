@@ -117,8 +117,11 @@ private:
     }
 };
 
+void AddSC_F024_WorgenTwoForms(); // two_forms.cpp
+
 void AddSC_F024_Worgen()
 {
+    AddSC_F024_WorgenTwoForms();
     RegisterSpellAndAuraScriptPair(spell_worgen_running_wild, spell_worgen_running_wild_aura);
     new player_worgen_running_wild();
 }
