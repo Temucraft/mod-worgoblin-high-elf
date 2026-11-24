@@ -158,9 +158,10 @@ public:
 
     // Preserve the descent aura across an airborne logout/map change. Landing,
     // including after the next login, is what starts the cooldown.
-    void OnPlayerBeforeLogout(Player* player) override { EndFlight(player); }
-    void OnPlayerMapChanged(Player* player) override { EndFlight(player); }
-    void OnPlayerJustDied(Player* player) override { Land(player); }
+    // Temucraft: only Kyrians can hover, so other players skip the lookup (a logout at shutdown crashed in it)
+    void OnPlayerBeforeLogout(Player* player) override { if (player->getRace(true) == Race()) EndFlight(player); }
+    void OnPlayerMapChanged(Player* player) override { if (player->getRace(true) == Race()) EndFlight(player); }
+    void OnPlayerJustDied(Player* player) override { if (player->getRace(true) == Race()) Land(player); }
 };
 
 class spell_kyrian_hover : public SpellScript
