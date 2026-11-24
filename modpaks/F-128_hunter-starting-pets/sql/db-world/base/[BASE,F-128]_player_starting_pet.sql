@@ -6,7 +6,7 @@ INSERT INTO `player_starting_pet` (`race`, `creature_entry`) VALUES
 (@Dwarf, 69102), -- Bear
 (@NightElf, 69103), -- Cat
 (@Undead, 69104), -- Spider
-(@Tauren, 69105), -- Tallstrider
+(@Tauren, 69105), -- Plainstrider
 (@Gnome, 69106), -- Mechanical
 (@Troll, 69107), -- Raptor
 (@BloodElf, 69108), -- Dragonhawk

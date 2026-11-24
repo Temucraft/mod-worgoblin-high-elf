@@ -25,7 +25,7 @@ UPDATE `pet_copy` SET `entry` = 69104, `name` = 'Spider', `subname` = NULL, `min
 INSERT INTO `creature_template` SELECT * FROM `pet_copy`;
 DELETE FROM `pet_copy`;
 INSERT INTO `pet_copy` SELECT * FROM `creature_template` WHERE `entry` = 2955;
-UPDATE `pet_copy` SET `entry` = 69105, `name` = 'Tallstrider', `subname` = NULL, `minlevel` = 1, `maxlevel` = 1, `faction` = 35, `npcflag` = 0, `lootid` = 0, `pickpocketloot` = 0, `skinloot` = 0, `mingold` = 0, `maxgold` = 0, `AIName` = '', `ScriptName` = '';
+UPDATE `pet_copy` SET `entry` = 69105, `name` = 'Plainstrider', `subname` = NULL, `minlevel` = 1, `maxlevel` = 1, `faction` = 35, `npcflag` = 0, `lootid` = 0, `pickpocketloot` = 0, `skinloot` = 0, `mingold` = 0, `maxgold` = 0, `AIName` = '', `ScriptName` = '';
 INSERT INTO `creature_template` SELECT * FROM `pet_copy`;
 DELETE FROM `pet_copy`;
 INSERT INTO `pet_copy` SELECT * FROM `creature_template` WHERE `entry` = 2031;
