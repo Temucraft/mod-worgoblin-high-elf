@@ -5,6 +5,11 @@
 4. Wait for the tool to finish, then copy the exported DBC files to your client patch
 
 # Tools
+- `checks/check_client_limits.py`: checks exported client DBCs against the limits of the stock 3.3.5a Wow.exe that
+  crash it (CharSections row order, playable race ids of 22 or more, more than 20 playable races, reputation list
+  indexes past 127, EmotesTextSound order). Each check names the Wow.exe function it protects. Folders after the
+  first fill in the files the first one lacks:
+  `python3 tools/checks/check_client_limits.py /path/to/client/DBFilesClient [/path/to/full/set]`
 - `checks/check_customization.py`: checks the customization data of race modpaks (CharSections, CharHairGeosets,
   CharacterFacialHairStyles, CharHairTextures, BarberShopStyle) for missing textures, textures from another race's
   folder, duplicate rows, colour/type gaps and geosets the model lacks. No database needed, but it reads the client
