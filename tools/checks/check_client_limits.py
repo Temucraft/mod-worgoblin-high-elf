@@ -19,7 +19,11 @@ Each check names the Wow.exe function (address from the wowdecomp // OFFSET: tag
   EmotesTextSound order   SI2::InitEmoteSounds 0x004CECB0 keeps pointers into a list that moves as it grows; rows of
                           an emote that come after a later emote's first row are written through an old pointer.
 
-Usage: check_client_limits.py DBC_FOLDER [MORE_FOLDERS...]
+With --races-30 the checks are for a Wow.exe patched by Temucraft's _tools/patch_wow_races.py (m_charPreferences
+moved to a [256][2] array, lua_checkstack added to the three race and class lists) and a glue with 30 race buttons:
+playable race ids up to 31 and up to 30 playable races are then fine.
+
+Usage: check_client_limits.py [--races-30] DBC_FOLDER [MORE_FOLDERS...]
 A file missing from the first folder is taken from the next one (so a patch's few DBCs can be checked on top of the
 full set). Exit code 1 when an error is found.
 """
@@ -44,7 +48,7 @@ def load(folders, name):
     return None, None
 
 
-def main(folders):
+def main(folders, races30=False):
     errors = []
     warnings = []
 
@@ -58,9 +62,11 @@ def main(folders):
     for r in playable:
         if r >= 32:
             errors.append(f'ChrRaces: playable race {r} is 32 or more (32-bit race masks)')
-        elif r >= 22:
+        elif r >= 22 and not races30:
             errors.append(f'ChrRaces: playable race {r} is 22 or more (CCharacterCreation::m_charPreferences[22][2])')
-    if len(playable) > 20:
+    if len(playable) > 30:
+        warnings.append(f'ChrRaces: {len(playable)} playable races; the glue has 30 race buttons')
+    elif len(playable) > 20 and not races30:
         warnings.append(f'ChrRaces: {len(playable)} playable races; the glue has 20 race buttons and '
                         'GetAvailableRaces has no lua_checkstack')
 
@@ -152,4 +158,5 @@ if __name__ == '__main__':
     if len(sys.argv) < 2:
         print(__doc__)
         raise SystemExit(2)
-    raise SystemExit(main(sys.argv[1:]))
+    args = [a for a in sys.argv[1:] if a != '--races-30']
+    raise SystemExit(main(args, races30=len(args) != len(sys.argv) - 1))
