@@ -9,7 +9,7 @@ INSERT IGNORE INTO `playercreateinfo_skills` (`raceMask`, `classMask`, `skill`, 
 (@AllianceMask, @PaladinMask, @2HMaceSkill, 0, '2H-Maces (Alliance Paladins)');
 
 -- The Orc, Undead, Tauren and Troll paladin outfits (dbc/[BASE,F-002]_charstartoutfit.sql) start with a two-handed mace
-UPDATE `playercreateinfo_skills` SET `raceMask` = `raceMask` | @OrcMask | @UndeadMask | @TaurenMask | @TrollMask
+UPDATE IGNORE `playercreateinfo_skills` SET `raceMask` = `raceMask` | @OrcMask | @UndeadMask | @TaurenMask | @TrollMask
 WHERE `skill` = @2HMaceSkill AND (`classMask` & @PaladinMask) != 0;
 
 -- Classic ARAC approach equalizes skills across races instead:

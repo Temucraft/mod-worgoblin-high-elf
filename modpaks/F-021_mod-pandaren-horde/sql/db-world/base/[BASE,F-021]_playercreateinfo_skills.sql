@@ -4,4 +4,4 @@ INSERT IGNORE INTO `playercreateinfo_skills` (`raceMask`, `classMask`, `skill`, 
 (@HordePandarenMask, 0, @HordePandarenRacials, 0, @HordePandarenRacialNameenUS);
 
 -- Two-Handed Maces: the warrior outfit copied from Tauren starts with one
-UPDATE `playercreateinfo_skills` SET `racemask` = `racemask` | @HordePandarenMask WHERE `skill` = @2HMaceSkill;
+UPDATE IGNORE `playercreateinfo_skills` SET `racemask` = `racemask` | @HordePandarenMask WHERE `skill` = @2HMaceSkill;

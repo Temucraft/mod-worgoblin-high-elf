@@ -1,10 +1,10 @@
 /*Updates existing starting skills to include Worgen where relevant
 -- UPDATE `playercreateinfo_skills` SET `racemask` = `racemask` | @WorgenMask WHERE `skill` = @BowSkill;
-UPDATE `playercreateinfo_skills` SET `racemask` = `racemask` | @WorgenMask WHERE `skill` = @GunSkill;
-UPDATE `playercreateinfo_skills` SET `racemask` = `racemask` | @WorgenMask WHERE `skill` = @DaggerSkill;
-UPDATE `playercreateinfo_skills` SET `racemask` = `racemask` | @WorgenMask WHERE `skill` = @2HMaceSkill;
+UPDATE IGNORE `playercreateinfo_skills` SET `racemask` = `racemask` | @WorgenMask WHERE `skill` = @GunSkill;
+UPDATE IGNORE `playercreateinfo_skills` SET `racemask` = `racemask` | @WorgenMask WHERE `skill` = @DaggerSkill;
+UPDATE IGNORE `playercreateinfo_skills` SET `racemask` = `racemask` | @WorgenMask WHERE `skill` = @2HMaceSkill;
 
-UPDATE `playercreateinfo_skills` SET `racemask` = `racemask` | @WorgenMask WHERE `skill` = @CommonSkill;
+UPDATE IGNORE `playercreateinfo_skills` SET `racemask` = `racemask` | @WorgenMask WHERE `skill` = @CommonSkill;
 */
 
 -- Racial skills
