@@ -502,3 +502,6 @@ INSERT INTO `spell` (`id`, `category`, `dispel`, `mechanic`, `attributes`, `attr
 -- icon: ability_racial_makecamp
 (@CoAVulperaRacial4, 0, 0, 0, 80, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 101, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 6, 0, 0, 1, 0, 0, 0, 0, 0, -3, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 186, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, @IconCoAAbilityRacialMakecamp, 0, 0, 'Desert Hardened', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 16712190, 'Racial', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 16712190, 'The sands of Vol\'dun forge tough hides.\n\nReduces the damage taken by Nature spells by $s1%.', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 16712190, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 16712190, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0);
 -- <<< CoA Custom 1.9 racials <<<
+
+-- Its tooltip says "damage taken", but the aura was 186 (attacker's chance to hit): the damage taken one (87), as meant
+UPDATE `spell` SET `effect_apply_aura_name_1` = 87 WHERE `id` = @CoAVulperaRacial4 AND `effect_apply_aura_name_1` = 186;

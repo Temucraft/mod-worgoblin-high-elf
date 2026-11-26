@@ -26,7 +26,7 @@ INSERT INTO `spell` (`id`, `category`, `dispel`, `mechanic`, `attributes`, `attr
 
 UPDATE `spell` SET `spell_icon_id` = @IconAncestralCall    WHERE `id` = @SpellAncestralCall;
 UPDATE `spell` SET `spell_icon_id` = @IconSavageBlood      WHERE `id` = @SpellSavageBlood;
-UPDATE `spell` SET `spell_icon_id` = @IconSympatheticVigor WHERE `id` = @SpellSympatheticVigor;
+UPDATE `spell` SET `spell_icon_id` = 534                   WHERE `id` = @SpellSympatheticVigor; -- Ability_Hunter_BeastTraining: a stock 3.3.5 icon (@IconSympatheticVigor is a retail file id)
 UPDATE `spell` SET `attributes`    = 80                    WHERE `id` = @SpellSympatheticVigor; -- PASSIVE + ABILITY (drops HIDDEN_CLIENTSIDE)
 UPDATE `spell` SET
     `effect_1` = 6,                         -- SPELL_EFFECT_APPLY_AURA

@@ -23,7 +23,7 @@ INSERT IGNORE INTO `playercreateinfo_action` VALUES
 (@KulTiran, @DeathKnight, 3, 45462, 0), -- Plague Strike
 (@KulTiran, @DeathKnight, 4, 45902, 0), -- Blood Strike
 (@KulTiran, @DeathKnight, 5, 47541, 0), -- Death Coil
-(@KulTiran, @DeathKnight, 6, 68992, 0), -- Darkflight
+(@KulTiran, @DeathKnight, 6, @CoAKulTiranRacial1, 0), -- Haymaker (was the Worgen's Darkflight)
 -- Worgen Shaman
 (@KulTiran, @Shaman, 0, 6603, 0), -- Auto Attack
 (@KulTiran, @Shaman, 1, 403, 0), -- Lightning Bolt

@@ -43,7 +43,7 @@ INSERT INTO `spell` (`id`, `category`, `dispel`, `mechanic`, `attributes`, `attr
  0, 0, 0,                  -- EffectPointsPerComboPoint 1-3
  0, 0, 0, 0, 0, 0, 0, 0, 0,-- EffectSpellClassMask A/B/C, 1-3
  0, 0,                     -- SpellVisual 1/2 — no visible cast effect, it's silent
- @IconDungeonDelver, 0, 0,                  -- SpellIconID, ActiveIconID (pick a movement/boot-themed icon you already have — see note below), SpellPriority
+ 516, 0, 0,                  -- SpellIconID (Ability_Rogue_Sprint, a stock 3.3.5 icon; @IconDungeonDelver is a retail file id), ActiveIconID, SpellPriority
  'Dungeon Delver', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 16712190,
  'Racial', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 16712172,
  'While indoors, movement speed increased by $s1%.', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 16712190,
@@ -105,7 +105,7 @@ INSERT INTO `spell` (`id`, `category`, `dispel`, `mechanic`, `attributes`, `attr
  0, 0, 0,
  0, 0, 0, 0, 0, 0, 0, 0, 0,
  0, 0,
- @IconDungeonDelver, 0, 0,
+ 516, 0, 0,                  -- Ability_Rogue_Sprint (stock)
  'Dungeon Delver', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 16712190,
  'Racial', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 16712172,
  'While indoors, movement speed increased by $s1%.', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 16712190,
